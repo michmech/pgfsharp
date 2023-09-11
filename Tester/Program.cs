@@ -21,6 +21,13 @@ namespace Tester {
             //PGFSharp.Expr e = PGFSharp.Expr.ReadExpr("Pred (This Pizza) Expensive");
             //foreach(string s in eng.LinearizeAll(e)) Console.WriteLine(s);
 
+            //Bracketed linearize:
+            //{
+            //    PGFSharp.Expr e = PGFSharp.Expr.ReadExpr("Pred (This Pizza) Expensive");
+            //    PGFSharp.Bracket b = eng.BracketedLinearize(e);
+            //    Console.WriteLine(b);
+            //}
+
             //Functions by return type:
             //foreach(string funName in gr.FunctionsByCat("Kind")) {
             //    Console.WriteLine($"fun {funName}");
