@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Linq;
 using System.Linq.Expressions;
 
@@ -6,11 +7,14 @@ namespace Tester {
     internal class Program {
         static void Main(string[] args) {
 
-            PGFSharp.PGF gr = PGFSharp.PGF.ReadPGF(@"C:\potustoronu\Foods.pgf");
+            //Path to Foods.pdg in the repo's root, or your own PGF file:
+            string path = Path.Combine(Directory.GetCurrentDirectory(), @"..\..\..\Foods.pgf");
+            
+            PGFSharp.PGF gr = PGFSharp.PGF.ReadPGF(path);
             PGFSharp.Concr eng = gr.Languages["FoodsEng"];
 
             //Parse:
-            //PGFSharp.Expr e=eng.Parse("this pizza is expensive").First().Item1;
+            //PGFSharp.Expr e = eng.Parse("this pizza is expensive").First().Item1;
             //Console.WriteLine(e.ToString());
 
             //Linearize:
